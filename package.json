@@ -1,0 +1,29 @@
+{
+  "name": "rpipiratebox",
+  "version": "1.0.0",
+  "description": "Pirate Box for my Raspberry Pi that allows the posting of messages and images",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwyserDev/rpiPirateBox.git"
+  },
+  "author": "SwyserDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwyserDev/rpiPirateBox/issues"
+  },
+  "homepage": "https://github.com/SwyserDev/rpiPirateBox#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-messages": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "express": "^4.13.4"
+  }
+}

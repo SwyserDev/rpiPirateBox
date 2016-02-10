@@ -1,0 +1,25 @@
+{
+  "name": "rpipiratebox",
+  "description": "Pirate Box for my Raspberry Pi that allows the posting of messages and images",
+  "main": "server.js",
+  "authors": [
+    "SwyserDev"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/SwyserDev/rpiPirateBox",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.5",
+    "angular-material-icons": "^0.6.0"
+  }
+}
