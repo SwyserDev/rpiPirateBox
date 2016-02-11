@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 
 app.get('/', function(req, res){
-  res.redirect('/index.html');
+  res.redirect('index.html');
   console.log('Serving index.html');
 });
 
