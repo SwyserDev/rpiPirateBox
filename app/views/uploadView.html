@@ -1,0 +1,42 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>A place to share what ever you want...</span>
+        </h2>
+    </div>
+</md-toolbar>
+
+
+<md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Message">
+            <md-content class="md-padding">
+                <h1 class="md-display-2">Message</h1>
+                <form name="userForm">
+                    <md-input-container class="md-block">
+                        <label>Email</label>
+                        <input required type="email" name="clientEmail" ng-model="project.clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                Your email must be between 10 and 100 characters long and look like an e-mail address.
+                            </div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Message</label>
+                        <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-content layout="row">
+                        <div flex></div>
+                        <md-button class="md-raised md-primary">Submit</md-button>
+                    </md-content>
+                </form>
+            </md-content>
+        </md-tab>
+        <md-tab label="Photo">
+            <md-content class="md-padding">
+                <h1 class="md-display-2">Photo</h1>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</md-content>

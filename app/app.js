@@ -16,6 +16,10 @@ rpiApp.config(function($routeProvider){
       templateUrl: 'app/views/messagesView.html',
       controller: 'MessagesController'
   }).
+  when('/upload', {
+      templateUrl: 'app/views/uploadView.html',
+      controller: 'UploadController'
+  }).
   otherwise({
       redirectTo: '/home'
   });
