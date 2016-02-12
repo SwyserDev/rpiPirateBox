@@ -1,0 +1,59 @@
+{
+  "name": "angular-messages",
+  "version": "1.5.0",
+  "description": "AngularJS module that provides enhanced support for displaying messages within templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "client-side"
+  ],
+  "author": {
+    "name": "Angular Core Team",
+    "email": "angular-core+npm@google.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "homepage": "http://angularjs.org",
+  "gitHead": "d6b6fa907ff760f178fab722f72200a7a06602e6",
+  "_id": "angular-messages@1.5.0",
+  "_shasum": "0961df33993475759d0052c6f97597e8510b82af",
+  "_from": "angular-messages@latest",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.2.6",
+  "_npmUser": {
+    "name": "angularcore",
+    "email": "angular-core+npm@google.com"
+  },
+  "maintainers": [
+    {
+      "name": "angularcore",
+      "email": "angular-core+npm@google.com"
+    },
+    {
+      "name": "petebd",
+      "email": "pete@bacondarwin.com"
+    }
+  ],
+  "dist": {
+    "shasum": "0961df33993475759d0052c6f97597e8510b82af",
+    "tarball": "http://registry.npmjs.org/angular-messages/-/angular-messages-1.5.0.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/angular-messages-1.5.0.tgz_1454673776831_0.6072291280142963"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-messages/-/angular-messages-1.5.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
