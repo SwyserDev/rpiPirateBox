@@ -3,99 +3,81 @@
 <html lang="en" ng-app="rpiApp">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Raspberry Pi Test</title>
-  <meta name="description" content="Test page for my brand spanking new Raspberry Pi!">
-  <meta name="author" content="SwyserDev">
+    <title>Raspberry Pi Test</title>
+    <meta name="description" content="Test page for my brand spanking new Raspberry Pi!">
+    <meta name="author" content="SwyserDev">
 
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-  <link rel="stylesheet" href="css/custom.css" />
-  <link rel="stylesheet" href="fonts/material-icons.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="fonts/material-icons.css" />
 </head>
 
 <body layout="column" ng-cloak ng-controller="RootController">
 
-  <md-toolbar layout="row">
-    <md-button class="menu" ng-click="toggleSidenav('left')"  hide-gt-sm>
-      <md-icon class="material-icons">menu</md-icon>
-    </md-button>
-    <div flex layout="row" layout-align="center center">
-      <h1>Angular Material Test</h1>
+    <md-toolbar layout="row" class="md-warn">
+        <md-button ng-click="toggleSidenav('left')" hide-gt-sm>
+            <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+        <div flex layout="row" layout-align="center center">
+            <h1>SwyserDev&nbsp</h1>
+            <h3>Pirate Box</h3>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" flex>
+        <md-sidenav class="md-whiteframe-z2" layout="column" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2 class="md-flex">Menu</h2>
+                </div>
+            </md-toolbar>
+            <md-list>
+                <md-list-item ng-click="go('/home')" class="">
+                    <md-icon class="material-icons">home</md-icon>
+                    <p> Home </p>
+                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                </md-list-item>
+
+                <md-list-item ng-click="go('/messages')">
+                    <md-icon class="material-icons">announcement</md-icon>
+                    <p> Messages </p>
+                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                </md-list-item>
+
+                <md-list-item ng-click="go('/photos')">
+                    <md-icon class="material-icons">collections</md-icon>
+                    <p> Photos </p>
+                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+
+        <md-content class="md-padding" layout="column" flex ng-view>
+
+        </md-content>
+
     </div>
-  </md-toolbar>
-
-  <div layout="row" flex>
-    <md-sidenav class="md-whiteframe-z2" layout="column" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-      <md-list>
-        <md-subheader class="md-no-sticky">Menu</md-subheader>
-        <md-divider></md-divider>
-        <md-list-item ng-click="console.log('clicky')">
-          <md-icon class="material-icons">home</md-icon>
-          <p> Home </p>
-          <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
-        </md-list-item>
-
-        <md-list-item ng-click="console.log('clicky')">
-          <md-icon class="material-icons">announcement</md-icon>
-          <p> Messages </p>
-          <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
-        </md-list-item>
-
-        <md-list-item ng-click="console.log('clicky')">
-          <md-icon class="material-icons">collections</md-icon>
-          <p> Photos </p>
-          <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
-        </md-list-item>
-      </md-list>
-    </md-sidenav>
-
-    <md-content class="md-padding" layout-xs="column" layout="row">
-      <div flex-xs flex-gt-xs="50" layout="column">
 
 
-        <md-card>
-          <img ng-src="images/card_01.jpg" cass="md-card-image" alt="Code funny">
-          <md-card-actions layout="row" layout-align="end center">
-            <md-button class="md-icon-button" aria-label="Favorite">
-              <md-icon class="material-icons">favorite</md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Settings">
-              <md-icon class="material-icons">menu</md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Share">
-              <md-icon class="material-icons">share-arrow</md-icon>
-            </md-button>
-          </md-card-actions>
-        </md-card>
 
 
-      </div>
 
-      <!-- <md-subheader class="md-no-sticky">Menu</md-subheader>
-      <md-divider></md-divider>
-      <md-list flex>
-        <md-list-item>
-          <md-icon class="material-icons">collections</md-icon>
-          <p> Photos </p>
-        </md-list-item>
-      </md-list> -->
-    </md-content>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
 
-  </div>
-
-  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="node_modules/angular-route/angular-route.min.js"></script>
-  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
-  <script src="node_modules/angular-aria/angular-aria.min.js"></script>
-  <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-  <script src="node_modules/angular-messages/angular-messages.min.js"></script>
-  <script src="bower_components/angular-material/angular-material.js"></script>
-
-  <script src="app/app.js"></script>
-  <script src="app/controllers/homeController.js"></script>
-  <script src="app/controllers/rootController.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/rootController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/photosController.js"></script>
+    <script src="app/controllers/messagesController.js"></script>
 </body>
 
 </html>

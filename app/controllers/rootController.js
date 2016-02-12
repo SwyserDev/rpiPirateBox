@@ -1,11 +1,15 @@
-(function(){
-  'use strict';
+(function() {
+    'use strict';
 
-  rpiApp.controller('RootController', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
-    $scope.toggleSidenav = function(menuId) {
-      $mdSidenav(menuId).toggle();
-    };
-  }]);
+    rpiApp.controller('RootController', ['$scope', '$mdSidenav', '$location', function($scope, $mdSidenav, $location) {
+        $scope.toggleSidenav = function(menuId) {
+            $mdSidenav(menuId).toggle();
+        };
+
+        $scope.go = function(path) {
+            $location.path(path);
+        };
+    }]);
 
 
 })();
