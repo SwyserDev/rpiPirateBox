@@ -14,7 +14,7 @@ rpiApp.config(function($routeProvider){
   }).
   when('/messages', {
       templateUrl: 'app/views/messagesView.html',
-      controller: 'MessagesController'
+      controller: 'MessageController'
   }).
   when('/upload', {
       templateUrl: 'app/views/uploadView.html',
