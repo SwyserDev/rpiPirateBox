@@ -15,21 +15,20 @@
     <link rel="stylesheet" href="fonts/material-icons.css" />
 </head>
 
-<body layout="column" ng-cloak ng-controller="RootController">
+<body layout="column" ng-cloak ng-controller="RootController" ng-cloak>
 
-    <md-toolbar layout="row" class="md-warn">
+    <md-toolbar layout="row">
         <md-button ng-click="toggleSidenav('left')" hide-gt-sm>
             <md-icon class="material-icons">menu</md-icon>
         </md-button>
         <div flex layout="row" layout-align="center center">
-            <h1>SwyserDev&nbsp</h1>
-            <h3>Pirate Box</h3>
+            <h1>Th' scurvy pirate box...</h1>
         </div>
     </md-toolbar>
 
     <div layout="row" flex>
         <md-sidenav class="md-whiteframe-z2" layout="column" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-            <md-toolbar>
+            <md-toolbar class="md-accent md-hue-3">
                 <div class="md-toolbar-tools">
                     <h2 class="md-flex">Menu</h2>
                 </div>
@@ -37,20 +36,27 @@
             <md-list>
                 <md-list-item ng-click="go('/home')" class="">
                     <md-icon class="material-icons">home</md-icon>
-                    <p> Home </p>
-                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                    <p> Th' harbour </p>
                 </md-list-item>
 
                 <md-list-item ng-click="go('/messages')">
-                    <md-icon class="material-icons">announcement</md-icon>
-                    <p> Messages </p>
-                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                    <md-icon class="material-icons">message</md-icon>
+                    <p> Shoutin' </p>
                 </md-list-item>
 
                 <md-list-item ng-click="go('/photos')">
-                    <md-icon class="material-icons">collections</md-icon>
-                    <p> Photos </p>
-                    <!-- <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch> -->
+                    <md-icon class="material-icons">photo</md-icon>
+                    <p> Paintin' </p>
+                </md-list-item>
+
+                <md-list-item ng-click="go('/upload')">
+                    <md-icon class="material-icons">cloud_upload</md-icon>
+                    <p> Ye secrets </p>
+                </md-list-item>
+
+                <md-list-item ng-click="go('/about')">
+                    <md-icon class="material-icons">info_outline</md-icon>
+                    <p> Aboot </p>
                 </md-list-item>
             </md-list>
         </md-sidenav>

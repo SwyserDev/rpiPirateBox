@@ -1,47 +1,71 @@
 <md-toolbar>
-    <div class="md-toolbar-tools">
-        <h2>
-            <span>A place to share what ever you want...</span>
+  <div class="md-toolbar-tools">
+    <h2>
+            <span>Ah! Ye be ready to spill th' beans</span>
         </h2>
-    </div>
+  </div>
 </md-toolbar>
 
 
 <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-        <md-tab label="Message">
-            <md-content class="md-padding">
-                <h1 class="md-display-2">Message</h1>
-                <form name="userForm">
-                    <md-input-container class="md-block">
-                        <label>Email</label>
-                        <input required type="email" name="clientEmail" ng-model="upload.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                        <div ng-messages="uploadForm.clientEmail.$error" role="alert">
-                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                                Your email must be between 10 and 100 characters long and look like an e-mail address.
-                            </div>
-                        </div>
-                    </md-input-container>
-                    <md-input-container class="md-block">
-                        <label>Email</label>
-                        <input required type="text" name="clientMessage" ng-model="upload.message" minlength="10" maxlength="100"/>
-                        <div ng-messages="uploadForm.clientEmail.$error" role="alert">
-                            <div ng-message-exp="['required', 'minlength', 'maxlength']">
-                                You must enter a message before you can sumbit.
-                            </div>
-                        </div>
-                    </md-input-container>
-                    <md-content layout="row">
-                        <div flex></div>
-                        <md-button class="md-raised md-primary">Submit</md-button>
-                    </md-content>
-                </form>
-            </md-content>
-        </md-tab>
-        <md-tab label="Photo">
-            <md-content class="md-padding">
-                <h1 class="md-display-2">Photo</h1>
-            </md-content>
-        </md-tab>
-    </md-tabs>
+  <md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="Shoutin'">
+      <md-content class="md-padding">
+        <h1 class="md-display-1">Ye wantin' to be shoutin'?</h1>
+        <form name="userForm">
+          <md-input-container class="md-block">
+            <label>Email</label>
+            <input required type="email" name="clientEmail" ng-model="upload.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+            <div ng-messages="uploadForm.clientEmail.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+              </div>
+            </div>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Message</label>
+            <input required type="text" name="clientMessage" ng-model="upload.message" minlength="10" maxlength="100" />
+            <div ng-messages="uploadForm.clientEmail.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                You must enter a message between 10 and 100 characters long before you can sumbit.
+              </div>
+            </div>
+          </md-input-container>
+          <md-content layout="row">
+            <div flex></div>
+            <md-button class="md-raised md-primary" layout-padding>
+              <md-icon class="material-icons">cloud_upload</md-icon> &nbsp;share
+            </md-button>
+          </md-content>
+        </form>
+      </md-content>
+    </md-tab>
+    <md-tab label="Paintin'">
+      <md-content class="md-padding">
+        <h1 class="md-display-1">Ye wantin' to be paintin'?</h1>
+        <form name="userForm">
+          <md-input-container class="md-block">
+            <label>Email</label>
+            <input required type="email" name="clientEmail" ng-model="upload.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+            <div ng-messages="uploadForm.clientEmail.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+              </div>
+            </div>
+          </md-input-container>
+            <md-button class="md-fab" ng-disabled="progress">
+              <label for="upload_photo">
+              </label>
+            </md-button>
+            <input type="file" id="upload_photo">
+          <md-content layout="row">
+            <div flex></div>
+            <md-button class="md-raised md-primary" layout-padding>
+              <md-icon class="material-icons">cloud_upload</md-icon> &nbsp;share
+            </md-button>
+          </md-content>
+        </form>
+      </md-content>
+    </md-tab>
+  </md-tabs>
 </md-content>
