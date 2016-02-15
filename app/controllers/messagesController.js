@@ -22,6 +22,27 @@
         title: 'Kovua Douche',
         message: 'Well, you seem to be a go getter?',
         date: '2016-02-13'
+      },
+      {
+        avatar: 'http://api.adorable.io/avatars/285/johan%40gmail.com',
+        email: 'johan@gmail.com',
+        title: 'Hahahahaha',
+        message: 'Pro\'s be trippin!',
+        date: '2016-02-13'
+      },
+      {
+        avatar: 'http://api.adorable.io/avatars/285/sipho%40live.co.za',
+        email: 'sipho@gmail.com',
+        title: 'Come on guys!',
+        message: 'Why you guys all so agro man? Just look at me? I have just created a conversation between 10 people on my own! Holy shit! Look, a crab...',
+        date: '2016-02-13'
+      },
+      {
+        avatar: 'http://api.adorable.io/avatars/285/wille.wagter%40jouma.co.za',
+        email: 'wille.wagter@jouma.co.za',
+        title: 'Happiness',
+        message: 'It makes me unbelievably happy to you all you guys fight like thins...Okay, now I think I whould go see a shrink, and not the tipe that tells you stories and sends you some meds, I am talking about the type where you need some electrical stimulations! Yeaaa boy!!',
+        date: '2016-02-13'
       }];
   });
 })();

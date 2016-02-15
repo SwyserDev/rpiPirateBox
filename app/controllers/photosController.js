@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  rpiApp.controller('PhotosController', function() {
+  rpiApp.controller('PhotosController', function($scope) {
 
 
     this.tiles = buildGridModel({
@@ -22,7 +22,7 @@
         };
         switch (j + 1) {
           case 1:
-          
+
             it.background = "red";
             it.span.row = it.span.col = 2;
             break;
