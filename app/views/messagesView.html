@@ -13,12 +13,12 @@
   <md-content>
     <md-list>
       <!-- <md-subheader class="md-no-sticky">3 line item</md-subheader> -->
-      <md-list-item class="md-3-line" ng-repeat="item in messages" layout-padding>
-        <img ng-src="{{item.avatar}}" class="md-avatar" alt="{{item.email}}" />
+      <md-list-item class="md-3-line" ng-repeat="message in messages" layout-padding>
+        <img ng-src="{{message.avatar}}" class="md-avatar" alt="{{message.email}}" />
         <div class="md-list-item-text" layout="column">
-          <h3>{{ item.email }}</h3>
-          <h4><b>{{ item.title }}</b></h4>
-          <p>{{ item.message }}</p>
+          <h3>{{ message.email }}</h3>
+          <h4><b>{{ message.title }}</b></h4>
+          <p>{{ message.message }}</p>
         </div>
       </md-list-item>
     </md-list>

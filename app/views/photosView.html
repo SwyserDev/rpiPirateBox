@@ -1,26 +1,39 @@
+<style>
+#md-grid-list {
+  margin: 8px; }
+.gridListdemoBasicUsage .gray {
+  background: #f5f5f5; }
+.gridListdemoBasicUsage .green {
+  background: #b9f6ca; }
+.gridListdemoBasicUsage .yellow {
+  background: #ffff8d; }
+.gridListdemoBasicUsage .blue {
+  background: #84ffff; }
+.gridListdemoBasicUsage .purple {
+  background: #b388ff; }
+.gridListdemoBasicUsage .red {
+  background: #ff8a80; }
+.gridListdemoBasicUsage md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+</style>
 <md-toolbar>
-    <div class="md-toolbar-tools">
-        <h2>
+  <div class="md-toolbar-tools">
+    <h2>
       <span>Paintin'</span>
     </h2>
-        <span flex></span>
-        <md-button class="md-raised" aria-label="Share" ng-click="go('/upload')">
-            <md-icon class="material-icons">cloud_upload</md-icon> &nbsp;Be sharin'
-        </md-button>
-    </div>
+    <span flex></span>
+    <md-button class="md-raised" aria-label="Share" ng-click="go('/upload')">
+      <md-icon class="material-icons">cloud_upload</md-icon> &nbsp;Be sharin'
+    </md-button>
+  </div>
 </md-toolbar>
 <md-whiteframe class="md-whiteframe-3dp" layout-padding>
-    <md-grid-list
-            md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
-            md-row-height-gt-md="1:1" md-row-height="4:3"
-            md-gutter="8px" md-gutter-gt-sm="4px" >
-        <md-grid-tile ng-repeat="tile in vm.tiles"
-                      md-rowspan="{{tile.span.row}}"
-                      md-colspan="{{tile.span.col}}"
-                      md-colspan-sm="1"
-                      ng-class="tile.background" >
-          <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-          <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-        </md-grid-tile>
-      </md-grid-list>
+  <md-grid-list class="gridListdemoBasicUsage" md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+    <md-grid-tile style="width:350px;" ng-repeat="photo in photos" class="red" md-rowspan="2" md-colspan="2" md-colspan-sm="1">
+      <img style="width:100%;" ng-src="{{ photo.photo }}" alt="{{ photo.title }}" />
+      <md-grid-tile-footer>
+        <h3>{{ photo.title }}</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
 </md-whiteframe>
