@@ -29,7 +29,6 @@ rpiApp.config(function($routeProvider) {
   });
 });
 
-
 rpiApp.config(function($mdThemingProvider) {
     $mdThemingProvider
     .theme('default')
